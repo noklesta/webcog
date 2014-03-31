@@ -6,7 +6,9 @@
                  [org.clojure/clojurescript "0.0-2173"]
                  [compojure "1.1.6"]
                  [reagent "0.4.2"]
-                 [clojurewerkz/neocons "2.0.1"]]
+                 [cljs-ajax "0.2.3"]
+                 [clojurewerkz/neocons "2.0.1"]
+                 [fogus/ring-edn "0.2.0"]]
 
   :plugins [[lein-cljsbuild "1.0.2"]]
 
