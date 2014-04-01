@@ -2,8 +2,6 @@
   (:require [clojure.string :refer [join upper-case]]
             [compojure.core :refer :all]
             [clojurewerkz.neocons.rest :as nr]
-            [clojurewerkz.neocons.rest.nodes :as nodes]
-            [clojurewerkz.neocons.rest.paths :as paths]
             [clojurewerkz.neocons.rest.cypher :as cy]))
 
 (def neo4j-rest-url "http://localhost:7474/db/data/")
