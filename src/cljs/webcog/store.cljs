@@ -1,12 +1,13 @@
 (ns webcog.store
   (:require [clojure.string :refer [join]]
+            [reagent.core :as reagent]
             [ajax.core :refer [GET POST]]))
 
 (def store (atom nil))
 
 (defn init [types]
-  (let [m {:nodes (into {} (map (fn [type] [type (atom [])]) (:nodes types)))
-           :paths (into {} (map (fn [type] [type (atom [])]) (:paths types)))}]
+  (let [m {:nodes (into {} (map (fn [type] [type (reagent/atom [])]) (:nodes types)))
+           :paths (into {} (map (fn [type] [type (reagent/atom [])]) (:paths types)))}]
     (reset! store m)))
 
 
